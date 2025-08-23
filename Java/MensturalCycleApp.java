@@ -3,19 +3,32 @@ public class MensturalCycleApp {
 public static void main(String[] args) {
 Scanner input = new Scanner(System.in);
 MensturalCycleFunction object = new MensturalCycleFunction();
-ArrayList<String> cycleDaysList = new ArrayList<>();
-
-int cycleCount = 0;
+int[][] cycleDayAndMonthArray = new cycleDayAndMonthArray [6][2]; 
+int[] calenderArray2025 = new calenderArray2025[12];
 int select = 0;
-while (select != 3) {
+int loginDay = 0;
+int loginMonth = 0;
+int month = 0;
+int day = 0;
+while (select != 4) {
+
 	object.appMenu();
 	select = input.nextInt();
+	object.loginDay();
+	loginDay = input.nextInt();
+	object.loginMonth();
+	loginMonth = input.nextInt();
+
 	switch (select) {
 		case 1:
-		object.cycleStartPrompt();
-		int days = input.nextInt();
+		object.lastCycleStartMonth();
+		month = input.nextInt();
+		object.lastCycleStartDay();
+		day = input.nextInt();
+		if 
+
 		int length = object.calculateCycleLength(day);
-		System.out.println("Your extimted cycle length is : " + length + "days");
+		System.out.println("Your extimated cycle length is : " + length + "days");
 		break;
 		case 2:
 		if (count <= 1){
